@@ -7,7 +7,7 @@
 Clone and build
 
 ```bash
-git clone https://github.com/shenggan/ps-lite
+git clone https://github.com/DLFC/ps-mpi
 cd ps-lite && make -j4
 ```
 
@@ -27,4 +27,4 @@ cd tests
 2. 修改运行脚本和测试样例，使得其适合 `mpi` 启动。
 3. 修改 `postoffice.cc` ，初始化时按 `mpi` 的 `rank` 分配 `role` 。
 4. 增加 `message.h` 中结构 `Node` 的成员 `rank_mpi` 记录节点的 `mpi_rank` 。并修改 `meta.proto` 。
-5. 修改 `zmq_van.h` 。将 `meta` 和 `data` 传递的方式改为 `mpi` 。
+5. 修改 `zmq_van.h` 。将 `data` 传递的方式改为 `mpi` 。
